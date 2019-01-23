@@ -78,20 +78,20 @@ class T_CON_BUTTON:public T_CON
         int push()
         {
             gotoxy(this->x*2,this->y);
-            printf("%s","¨X");
-            for(int i=0; i<this->width-2; i++) printf("%s","¨T¨T");
-            printf("%s","¨[");
+            printf("%s","â•”");
+            for(int i=0; i<this->width-2; i++) printf("%s","â•â•");
+            printf("%s","â•—");
             for(int i=this->y+1; i<=this->height+this->y-2; i++)
             {
                 gotoxy(this->x*2,i);
-                printf("¨U");
+                printf("â•‘");
                 gotoxy(this->x*2+this->width*2-2,i);
-                printf("¨U");
+                printf("â•‘");
             }
             gotoxy(this->x*2,this->y+this->height-1);
-            printf("%s","¨^");
-            for(int i=0; i<this->width-2; i++) printf("%s","¨T¨T");
-            printf("%s","¨a");
+            printf("%s","â•š");
+            for(int i=0; i<this->width-2; i++) printf("%s","â•â•");
+            printf("%s","â•");
             this->push_title();
         }
         int push_title()
@@ -124,20 +124,20 @@ class T_CON_GROUP:public T_CON
         int push()
         {
             gotoxy(this->x*2,this->y);
-            printf("%s","©°");
-            for(int i=0; i<this->width-2; i++) printf("%s","©¤©¤");
-            printf("%s","©´");
+            printf("%s","â”Œ");
+            for(int i=0; i<this->width-2; i++) printf("%s","â”€â”€");
+            printf("%s","â”");
             for(int i=this->y+1; i<=this->height+this->y-2; i++)
             {
                 gotoxy(this->x*2,i);
-                printf("©¦");
+                printf("â”‚");
                 gotoxy(this->x*2+this->width*2-2,i);
-                printf("©¦");
+                printf("â”‚");
             }
             gotoxy(this->x*2,this->y+this->height-1);
-            printf("%s","©¸");
-            for(int i=0; i<this->width-2; i++) printf("%s","©¤©¤");
-            printf("%s","©¼");
+            printf("%s","â””");
+            for(int i=0; i<this->width-2; i++) printf("%s","â”€â”€");
+            printf("%s","â”˜");
         }
         int del()
         {
@@ -182,20 +182,20 @@ class T_CON_MENU:public T_CON
         int push()
         {
             gotoxy(this->x*2,this->y);
-            printf("%s","©°");
-            for(int i=0; i<this->width-2; i++) printf("%s","©¤©¤");
-            printf("%s","©´");
+            printf("%s","â”Œ");
+            for(int i=0; i<this->width-2; i++) printf("%s","â”€â”€");
+            printf("%s","â”");
             for(int i=this->y+1; i<=this->height+this->y-2; i++)
             {
                 gotoxy(this->x*2,i);
-                printf("©¦");
+                printf("â”‚");
                 gotoxy(this->x*2+this->width*2-2,i);
-                printf("©¦");
+                printf("â”‚");
             }
             gotoxy(this->x*2,this->y+this->height-1);
-            printf("%s","©¸");
-            for(int i=0; i<this->width-2; i++) printf("%s","©¤©¤");
-            printf("%s","©¼");
+            printf("%s","â””");
+            for(int i=0; i<this->width-2; i++) printf("%s","â”€â”€");
+            printf("%s","â”˜");
             this->push_button();
             this->exist=true;
         }
@@ -203,7 +203,7 @@ class T_CON_MENU:public T_CON
         {
             gotoxy(this->x*2+2,this->y+ind*2);
             for(int i=1; i<=this->width-2; i++)
-                cout<<"©¤©¤";
+                cout<<"â”€â”€";
         }
         void push_button()
         {
@@ -397,9 +397,9 @@ void start(HANDLE hOut)
     gotoxy(0,0);
     cout<<"--------------\nConsoleAPI\n--------------\n";
     Sleep(300);
-    cout<<"v2.5\n\n\n";
+    cout<<"v0.1\n\n\n";
     Sleep(700);
-    cout<<"¼ÓÔØÖĞ";
+    cout<<"åŠ è½½ä¸­";
     for(int i=1; i<=7; i++)
     {
         Sleep(100);
@@ -416,7 +416,7 @@ void start(HANDLE hOut)
     cout<<"\n\n\n                   ";
     for(int i=1; i<=14; i++)
     {
-        cout<<"¨€";
+        cout<<"â–ˆ";
         Sleep(50);
     }
     clrscr();
@@ -426,7 +426,7 @@ void quit()
 {
     clrscr();
     gotoxy(0,0);
-    cout<<"ÍË³öÖĞ";
+    cout<<"é€€å‡ºä¸­";
     for(int i=1; i<=2; i++)
     {
         gotoxy(7,0);
@@ -444,18 +444,18 @@ bool password(HANDLE hOut)
 {
     string pass;
     gotoxy(0,0);
-    cout<<"ÇëÊäÈëÃÜÂë:\n";
+    cout<<"è¯·è¾“å…¥å¯†ç :\n";
     CursorVisible(hOut,FALSE);
     cin>>pass;
     CursorVisible(hOut,TRUE);
     if(pass=="password")
     {
-        MessageBox(NULL,"µÇÈë!","ÌáÊ¾",0);
+        MessageBox(NULL,"ç™»å…¥!","æç¤º",0);
         return true;
     }
     else
     {
-        MessageBox(NULL,"ÃÜÂë´íÎó!","ÌáÊ¾",0);
+        MessageBox(NULL,"å¯†ç é”™è¯¯!","æç¤º",0);
         return false;
     }
     clrscr();
