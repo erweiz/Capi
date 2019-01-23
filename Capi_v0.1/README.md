@@ -1,1 +1,5 @@
-v0.1(Only Chinese is supported.仅支持中文。)
+v0.1
+
+1 进入后输入密码（默认“password”）；
+
+2 右键即可弹出菜单！
