@@ -1,1 +1,1 @@
-v0.1部分汉化
+# Capi A console API for Windows!
