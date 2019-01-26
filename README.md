@@ -1,1 +1,3 @@
-# Capi A console API for Windows!
+# Capi
+
+A console API for Windows!
